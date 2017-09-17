@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Brzo citanje</title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="index.css">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"> 
+    </head>
+    <body>
+    
+        <!--Page1--><!--Svaka page mora da ima svoj header i footer, ovde su div-ovi prakticno strane u appu-->
+        <div data-role="page" id="page1" data-theme="a">
+           <div data-role="header">
+               
+           </div> 
+           
+           <div role="main" class="ui-content">
+               <div class="header">
+                   <h1>Brzo čitanje</h1>
+                   <p>Za vežbu brzog čitanja</p>
+               </div>
+               
+              <div id="controls">
+               
+               <div class="ui-grid-a">
+                   <div class="ui-block-a">
+                       <div>
+                          VELIČINA SLOVA: <span id="fontsize">50</span> px. 
+                       </div>
+                   </div>
+                    <div class="ui-block-b">
+                       <div>
+                           <span id="speed">300</span> reci u minuti.
+                       </div>
+                   </div>
+               </div>
+               
+               
+               
+               <div class="ui-grid-a">
+                   <div class="ui-block-a">
+                       <form class="full-width-slider">
+                           <input type="range" name="fontsizeslider" id="fontsizeslider" min="20" max="100" value="50" step="5" data-highlight="true">
+                       </form>
+                   </div>
+                    <div class="ui-block-b">
+                       <form class="full-width-slider">
+                           <input type="range" name="speedslider" id="speedslider" min="50" max="600" value="300" step="50" data-highlight="true">
+                       </form>
+                   </div>
+               </div>
+               
+               
+               
+               
+                   <form class="full-width-slider">
+                           <label for="progressslider">PROGRES: <span id="percentage"></span>%</label>
+                           <input type="range" name="progressslider" id="progressslider" min="0" max="100" value="0" data-highlight="true">
+                   </form> 
+               </div>
+               
+                   
+               
+               <div id="result">
+                   
+               </div>
+               
+               
+               
+               <div id="error">
+                   Molim vas kopirajte neki text 
+               </div>
+               
+               <div id="inputs">
+                   <textarea id="userInput"></textarea>
+                   
+                   <button id="start">Start</button>
+                   <button id="new">Novo</button>
+                   <button id="pause">Pauza</button>
+                   <button id="resume">Nastavi</button>
+                   
+               </div>  
+            
+           </div>
+        
+        
+        
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#page1" data-transition="pop" data-icon="home" class="ui-btn-active ui-state-persist">Home</a>
+                    </li>
+                    <li>
+                        <a href="#page2" data-transition="pop" data-icon="info">Uputstvo</a>
+                    </li>
+                    <li>
+                        <a href="#page3" data-transition="pop" data-icon="mail">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        
+        <!--Page2-->
+    
+       <div data-role="page" id="page2" data-theme="a">
+    
+
+       <div role="main" class="ui-content">
+           <h1>Uputstvo</h1>
+           <p id="uputstvo">Obeležite i kopirajte tekst iz bilo koje aplikacije koju vaš mobilni poseduje i zatim je nalepite u polje. Nebitno je da li je ćirilica ili latinica. Takođe možete da podesite veličinu slova i broj reči u minuti koristeći gornje skale.</p>
+       </div>
+        
+        
+        
+        
+        
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#page1" data-transition="pop" data-icon="home" class="ui-btn-active ui-state-persist">Home</a>
+                    </li>
+                    <li>
+                        <a href="#page2" data-transition="pop" data-icon="info">Uputstvo</a>
+                    </li>
+                    <li>
+                        <a href="#page3" data-transition="pop" data-icon="mail">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        </div>
+    
+    
+        <!--Page3-->
+    
+    <div data-role="page" id="page3" data-theme="a">
+       <div data-role="header"></div>
+    
+    <div role="main" class="ui-content">
+           <h1>Ovo je prosta i prva aplikacija koju sam napravio tako da budite blagi :)</h1>
+           <p id="uputstvo">Ako imate bilo kakve ideje ili primedbe pošaljite ih preko google play store-a.</p>
+       </div>
+    
+    
+    
+    <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#page1" data-transition="pop" data-icon="home" class="ui-btn-active ui-state-persist">Home</a>
+                    </li>
+                    <li>
+                        <a href="#page2" data-transition="pop" data-icon="info">Uputstvo</a>
+                    </li>
+                    <li>
+                        <a href="#page3" data-transition="pop" data-icon="mail">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        </div>
+    
+    
+    <script src="javascript.js"></script>
+    </body>
+</html>
